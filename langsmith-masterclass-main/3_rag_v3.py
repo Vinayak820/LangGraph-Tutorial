@@ -13,6 +13,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough, RunnableLambda
 from langchain_core.output_parsers import StrOutputParser
 
+os.environ["LANGCHAIN_PROJECT"] = "RAG 3 ChatBot"
 load_dotenv()
 
 PDF_PATH = "islr.pdf"  # <- change to your file
