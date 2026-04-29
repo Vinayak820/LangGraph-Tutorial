@@ -5,6 +5,9 @@ from langchain_community.tools import DuckDuckGoSearchRun
 from langchain.agents import create_react_agent, AgentExecutor
 from langchain import hub
 from dotenv import load_dotenv
+import os
+
+os.environ['LANGCHAIN_PROJECT'] = 'ReACT Agent'
 
 load_dotenv()
 
@@ -15,7 +18,7 @@ def get_weather_data(city: str) -> str:
   """
   This function fetches the current weather data for a given city
   """
-  url = f'https://api.weatherstack.com/current?access_key=f07d9636974c4120025fadf60678771b&query={city}'
+  url = f'https://api.weatherstack.com/current?access_key=Set_your_Key_Here&query={city}'
 
   response = requests.get(url)
 
