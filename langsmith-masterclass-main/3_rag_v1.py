@@ -12,7 +12,8 @@ from langchain_core.output_parsers import StrOutputParser
 
 load_dotenv()  # expects OPENAI_API_KEY in .env
 
-PDF_PATH = "islr.pdf"  # <-- change to your PDF filename
+os.environ["LANGCHAIN_PROJECT"] = "RAG 1 ChatBot"
+PDF_PATH = "islr.pdf"  # change according to your PDF filename
 
 # 1) Load PDF
 loader = PyPDFLoader(PDF_PATH)
